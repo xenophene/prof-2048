@@ -506,6 +506,10 @@ hr {
   html, body {
     font-size: 15px; }
 
+  body:after {
+    content: 'small-screen';
+    display: none; }
+
   body {
     margin: 20px 0;
     padding: 0 20px; }

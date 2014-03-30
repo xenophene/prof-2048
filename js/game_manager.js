@@ -84,12 +84,13 @@ GameManager.prototype.preloadImages = function () {
     'subodh.jpg',
     'suban.jpg',
   ];
+  var size = window.innerWidth < 500 ? "58" : "107";
   for (var i = 0; i < imageNames.length; i++) {
     var img = new Image();
     img.src = 'http://www.cse.iitd.ac.in/images/faculty/' +
         imageNames[i];
-    //img.height = "107";
-    //img.width = "107";
+    img.height = size;
+    img.width = size;
     img.style.borderRadius = "3px";
     this.images[i] = img;
   }
