@@ -63,10 +63,10 @@ HTMLActuator.prototype.addTile = function (tile, images) {
 
   inner.classList.add("tile-inner");
   imageIndex = Math.log(tile.value) / Math.LN2 - 1;
-  console.log(imageIndex);
-  console.log(images[imageIndex]);
-  inner.appendChild(images[imageIndex].cloneNode(true));
-  console.log(inner);
+  var node = images[imageIndex].cloneNode(true);
+  node.style.width = inner.style.width;
+  node.style.height = inner.style.height;
+  inner.appendChild(node);
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first

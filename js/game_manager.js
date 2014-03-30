@@ -88,8 +88,8 @@ GameManager.prototype.preloadImages = function () {
     var img = new Image();
     img.src = 'http://www.cse.iitd.ac.in/images/faculty/' +
         imageNames[i];
-    img.height = "107";
-    img.width = "107";
+    //img.height = "107";
+    //img.width = "107";
     img.style.borderRadius = "3px";
     this.images[i] = img;
   }
